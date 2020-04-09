@@ -1,0 +1,234 @@
+.container {
+    max-width: $max-width;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+
+    .auth-div {
+        overflow: hidden;
+        padding: 0 2rem;
+        margin-top: 6rem;
+        margin-bottom: 3rem;
+
+        &-center {
+            max-width: ($max-width/2.5);
+            margin: auto;
+        }
+    }
+}
+
+// Backgrounds
+.bg {
+    &-primary {
+        @include set-background($primary-color);
+    }
+
+    &-light {
+        @include set-background($light-color);
+        border: #ccc 1px solid;
+    }
+
+    &-dark {
+        @include set-background($dark-color);
+    }
+
+    &-success {
+        @include set-background($success-color);
+    }
+
+    &-danger {
+        @include set-background($danger-color);
+    }
+
+    &-white {
+        @include set-background($white-color);
+        border: #ccc 1px solid;
+    }
+}
+
+// Text
+.text {
+    line-height: 1.2;
+    margin-bottom: 1rem;
+
+    &-xl {
+        font-size: 4rem;
+    }
+
+    &-l {
+        font-size: 3rem;
+    }
+}
+
+.lead {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.text {
+    &-primary {
+        color: $primary-color;
+    }
+}
+
+// image
+.round-img {
+    border-radius: 50%;
+}
+
+// line
+.line {
+    height: 1px;
+    background: #ccc;
+    margin: 1.5rem 0;
+}
+
+// buttons
+.btn {
+    display: inline-block;
+    background-color: $light-color;
+    color: #333;
+    padding: 0.4rem 1.3rem;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    transition: all .3s ease-in-out;
+
+    &.btn-primary {
+        @include set-background($primary-color);
+        border-bottom: 2px darken($primary-color, 5%) solid;
+        border-right: 2px darken($primary-color, 5%) solid;
+
+        &:hover {
+            background-color: lighten($primary-color, 5%);
+        }
+    }
+
+    &.btn-dark {
+        @include set-background($dark-color);
+        border-bottom: 2px darken($dark-color, 5%) solid;
+        border-right: 2px darken($dark-color, 5%) solid;
+
+
+        &:hover {
+            background-color: lighten($dark-color, 5%);
+        }
+    }
+
+    &.btn-success {
+        @include set-background($success-color);
+        border-bottom: 2px darken($success-color, 5%) solid;
+        border-right: 2px darken($success-color, 5%) solid;
+
+
+        &:hover {
+            background-color: lighten($success-color, 5%);
+        }
+    }
+
+    &.btn-danger {
+        @include set-background($danger-color);
+        border-bottom: 2px darken($danger-color, 5%) solid;
+        border-right: 2px darken($danger-color, 5%) solid;
+
+
+        &:hover {
+            background-color: lighten($danger-color, 5%);
+        }
+    }
+
+    // btn size
+    &.btn-block {
+        display: block;
+        width: 100%;
+    }
+
+    &:hover {
+        background-color: lighten($dark-color, 20%);
+        color: $white-color;
+    }
+}
+
+// Alerts
+.alert {
+    padding: 0.8rem;
+    margin: .2rem;
+    opacity: .9;
+    background: $light-color;
+    color: lighten($dark-color, 10%);
+
+    &.alert-primary {
+        @include set-background($primary-color);
+    }
+
+    &.alert-dark {
+        @include set-background($dark-color);
+    }
+
+    &.alert-success {
+        @include set-background($success-color);
+    }
+
+    &.alert-danger {
+        @include set-background($danger-color);
+    }
+}
+
+// badges
+.badge {
+    font-size: 0.8rem;
+    padding: 0.1rem;
+    margin: .3rem;
+    text-align: center;
+    background-color: $light-color;
+    color: #333;
+    border-radius: 3px;
+
+    &.badge-primary {
+        @include set-background($primary-color);
+    }
+
+    &.badge-dark {
+        @include set-background($dark-color);
+    }
+
+    &.badge-success {
+        @include set-background($success-color);
+    }
+
+    &.badge-danger {
+        @include set-background($danger-color);
+    }
+
+    &.badge-white {
+        @include set-background($white-color);
+    }
+}
+
+// dark overlay
+.dark-overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: #000000, $alpha: .7);
+}
+
+.table {
+
+    th,
+    td {
+        padding: .6rem;
+        text-align: left;
+    }
+
+    th {
+        background: $light-color;
+    }
+}
